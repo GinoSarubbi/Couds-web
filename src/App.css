@@ -1,0 +1,314 @@
+header{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  animation: header 1s ease-in-out forwards;
+}
+
+/*titulo*/
+
+.title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.title h1{
+  font-size: 2em;
+  font-weight: 500;
+  font-family: inherit;
+  color: #646cff;
+  text-decoration: inherit;
+  transition: all 0.15s;
+  cursor: pointer;
+  
+}
+
+.title h1 svg{
+  animation: moveCloud2 2s linear infinite; 
+}
+
+
+/*icon cloud*/
+.icon-cloud{
+  font-size: 2em;
+  color: #e6e6e6;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+
+/*navegacion*/
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+}
+
+nav ul li{
+  font-size: 15px;
+  color: #ffffffbb;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+
+nav ul li:last-child{
+  font-size: 15px;
+  background-color: #646cff;
+  border-radius: 5px;
+  padding: 0.6em 1.2em;
+  color: #ffffff;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+
+/*hovers*/
+nav ul li:hover{
+  color: #ffffff;
+
+}
+
+nav ul li:last-child:hover{
+  background-color: #535bf2;
+}
+
+.title h1:hover{
+  transform: scale(1.1);
+}
+
+
+
+
+/*animation title*/
+@keyframes header {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+
+
+/*MAIN*/
+
+main{
+  margin-top: 100px;
+  
+}
+
+.contenedor-flex{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  text-align: start;
+  gap: 30px;
+  z-index: 1;
+}
+
+.container h1{
+  font-size: 3em;
+  font-weight: 500;
+  font-family: inherit;
+  color: #e6e6e6;
+  text-decoration: inherit;
+  transition: all 0.15s;
+  cursor: pointer;
+  width: 700px;
+  text-align: start;
+}
+
+.container h1 span{
+  background-color: #646cff;
+  border-radius: 5px;
+}
+
+.detalles p{
+  font-weight: 500;
+  color: #8d8d8d87;
+  width: 600px;
+  text-align: start;
+  position: relative;
+}
+
+
+.detalles-input input{
+  width: 600px;
+  height: 50px;
+  border: 1px solid #646cff;
+  border-radius: 5px;
+  padding: 0.6em 1.2em;
+  font-size: 15px;
+  color: #646cff;
+  transition: all 0.15s;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+
+/*SVG INPUT*/
+/* card.css */
+
+.send-icon {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-send' viewBox='0 0 16 16'><path d='M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z'/></svg>");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+
+}
+
+
+
+
+
+
+/* card.css */
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 5px;
+  height: 160px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  background-color: #ffffff;
+  transition: all 0.25s ease-in;
+  z-index: 1;
+}
+
+
+
+.card-title {
+  font-size: 18px;
+}
+
+/*CARD HOVERS*/
+.card:hover{
+  transform: scale(1.1);
+  box-shadow: #646cff 0px 0px 10px 0px;
+}
+
+.card-body p{
+  font-size: 12px;
+  color: #30303087;
+  width: 240px;
+  font-weight: bold;
+  text-align: center ;
+}
+
+
+/*media querys*/
+
+@media screen and (max-width: 768px) {
+  .contenedor-flex{
+    flex-direction: column;
+    background-color: #202021;
+  }
+  .container{
+    text-align: center;
+  }
+  .container h1{
+    width: 100%;
+    text-align: center;
+  }
+  .detalles p{
+    width: 100%;
+    text-align: center;
+  }
+  .detalles-input input{
+    width: 400px;
+    text-align: start;
+    margin-bottom: 100px;
+  }
+  .card-container{
+    grid-template-columns: repeat(1, 1fr);
+    z-index: 999;
+  }
+  .card{
+    margin-bottom: 20px;
+    height: 200px;
+    width: 300px;
+    color: #202021;
+  }
+
+  .waves svg{
+   display: none;
+  }
+
+  nav ul li{
+    font-size: 10px;
+  }
+
+  nav ul li:last-child{
+    font-size: 10px;
+    padding: 0.6em 1.2em;
+  }
+
+}
+
+
+
+
+/*animations*/
+@keyframes moveCloud {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px); 
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes moveCloud2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px); 
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.waves{
+  animation: moveCloud 2s linear infinite; 
+}
+
+
